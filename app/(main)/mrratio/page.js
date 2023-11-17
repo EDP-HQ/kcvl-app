@@ -1095,7 +1095,7 @@ const MRRatio = () => {
           <TabPanel>
             <strong>LINE E</strong>
             <Card className="flex flex-wrap gap-3 mx-auto">
-              {ProgresData(resultD14A)}
+              {ProgresData(resultD15E)}
             </Card>
             <strong>LINE F</strong>
             <Card className="flex flex-wrap gap-3 mx-auto">
