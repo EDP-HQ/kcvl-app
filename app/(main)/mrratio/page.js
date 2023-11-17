@@ -64,7 +64,7 @@ const MRRatio = () => {
     // // D14A
     // getd16("D16")
     //   .then((data) => {
-    //     // console.log(data);
+    //     console.log(data);
     //     //  setResultData(data);
     //   })
     //   .catch((err) => console.log(err));
@@ -1017,10 +1017,10 @@ const MRRatio = () => {
       return (
         <>
           {data.map((item) => (
-            <div key={item.ID}>
+            <div key={item.MACHCODE}>
               {/* {item.MACHNAME} */}
               <ProgressCircle
-                id={item.ID}
+                id={item.MACHCODE}
                 value={item.MC_RATIO}
                 radius={60}
                 strokeWidth={10}
@@ -1092,8 +1092,42 @@ const MRRatio = () => {
               {ProgresData(resultD14D)}
             </Card>
           </TabPanel>
-          <TabPanel>D15</TabPanel>
-          <TabPanel>D16</TabPanel>
+          <TabPanel>
+            <strong>LINE E</strong>
+            <Card className="flex flex-wrap gap-3 mx-auto">
+              {ProgresData(resultD14A)}
+            </Card>
+            <strong>LINE F</strong>
+            <Card className="flex flex-wrap gap-3 mx-auto">
+              {ProgresData(resultD15F)}
+            </Card>
+            <strong>LINE G</strong>
+            <Card className="flex flex-wrap gap-3 mx-auto">
+              {ProgresData(resultD15G)}
+            </Card>
+            <strong>LINE H</strong>
+            <Card className="flex flex-wrap gap-3 mx-auto">
+              {ProgresData(resultD15H)}
+            </Card>
+          </TabPanel>
+          <TabPanel>
+            <strong>LINE A</strong>
+            <Card className="flex flex-wrap gap-3 mx-auto">
+              {ProgresData(resultD16A)}
+            </Card>
+            <strong>LINE B</strong>
+            <Card className="flex flex-wrap gap-3 mx-auto">
+              {ProgresData(resultD16B)}
+            </Card>
+            <strong>LINE C</strong>
+            <Card className="flex flex-wrap gap-3 mx-auto">
+              {ProgresData(resultD16C)}
+            </Card>
+            <strong>LINE D</strong>
+            <Card className="flex flex-wrap gap-3 mx-auto">
+              {ProgresData(resultD16C)}
+            </Card>
+          </TabPanel>
         </TabPanels>
       </TabGroup>
 
