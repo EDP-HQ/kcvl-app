@@ -14,7 +14,7 @@ const AppMenu = () => {
     {
       label: "Menu",
       items: [
-        { label: "Landing", icon: "pi pi-fw pi-home", to: "/" },
+        { label: "Home", icon: "pi pi-fw pi-home", to: "/" },
         // {
         //   label: "Demo 1",
         //   icon: "pi pi-fw pi-check-square",
@@ -25,28 +25,15 @@ const AppMenu = () => {
         //   icon: "pi pi-fw  pi-exclamation-circle",
         //   to: "/charts",
         // },
-        { label: "Dashboard", icon: "pi pi-fw pi-id-card", to: "/landing" },
         {
-          label: "Dashboard - #Demo1",
-          icon: "pi pi-fw pi-id-card",
-          to: "/kcvldemo1",
+          label: "Machine Running Status",
+          icon: "pi pi-fw pi-check-square",
+          to: "/mrratio",
         },
-        {
-          label: "Dashboard - #Demo2",
-          icon: "pi pi-fw pi-id-card",
-          to: "/kcvldemo",
-        },
-
-        // {
-        //   label: "Demo2",
-        //   icon: "pi pi-fw pi-bookmark",
-        //   to: "/demo2",
-        // },
-        {
-          label: "KCVL - #Table",
-          icon: "pi pi-fw pi-exclamation-circle",
-          to: "/demo3",
-        },
+        // { label: "Dashboard", icon: "pi pi-fw pi-id-card", to: "/landing" },
+        // { label: "Dashboard - #Demo1", icon: "pi pi-fw pi-id-card", to: "/kcvldemo1" },
+        // { label: "Dashboard - #Demo2", icon: "pi pi-fw pi-id-card", to: "/kcvldemo" },
+        // { label: "KCVL - #Table", icon: "pi pi-fw pi-exclamation-circle", to: "/demo3" },
         // {
         //   label: "Button",
         //   icon: "pi pi-fw pi-mobile",

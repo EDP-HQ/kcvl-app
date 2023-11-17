@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"{components,app,layout,service,api-generator}/**/*.{js,ts,tsx,d.ts}\"",
+    "build:analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
     "lint": "next lint"
   },
   "dependencies": {
@@ -24,7 +25,10 @@
     "primereact": "^9.6.2",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-d3-speedometer": "^1.1.0",
     "react-dom": "^18",
+    "react-gauge-chart": "^0.4.1",
     "recharts": "^2.9.3"
   },
   "devDependencies": {
@@ -37,6 +41,7 @@
     "postcss": "^8",
     "prettier": "^2.8.8",
     "sass": "^1.63.4",
+    "source-map-explorer": "^2.5.3",
     "tailwindcss": "^3",
     "typescript": "^5"
   }
