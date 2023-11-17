@@ -390,6 +390,265 @@ const MRRatio = () => {
       </>
     );
   };
+
+  const LineB = () => {
+    return (
+      <>
+        <ProgressCircle
+          id="twb01"
+          value={5}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB01</Text>
+            <Badge className="text-center">5%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="twb02"
+          value={2}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB02</Text>
+            <Badge className="text-center">2%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB03"
+          value={0}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB03</Text>
+            <Badge className="text-center">0%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB04"
+          value={3}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB04</Text>
+            <Badge className="text-center">3%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB05"
+          value={4}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB05</Text>
+            <Badge className="text-center">4%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB06"
+          value={7}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB06</Text>
+            <Badge className="text-center">7%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB07"
+          value={7}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="slate"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB07</Text>
+            <Badge className="text-center">7%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB08"
+          value={7}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="slate"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB08</Text>
+            <Badge className="text-center">7%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB09"
+          value={7}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="slate"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB09</Text>
+            <Badge className="text-center">7%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB10"
+          value={0}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="slate"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB10</Text>
+            <Badge className="text-center">0%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB11"
+          value={4}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB11</Text>
+            <Badge className="text-center">4%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB12"
+          value={2}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB12</Text>
+            <Badge className="text-center">2%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB13"
+          value={0}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB13</Text>
+            <Badge className="text-center">0%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB14"
+          value={0}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB14</Text>
+            <Badge className="text-center">0%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB15"
+          value={8}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB15</Text>
+            <Badge className="text-center">8%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB16"
+          value={0}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB16</Text>
+            <Badge className="text-center">0%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB17"
+          value={0}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB17</Text>
+            <Badge className="text-center">0%</Badge>
+          </Grid>
+        </ProgressCircle>
+
+        <ProgressCircle
+          id="TWB18"
+          value={4}
+          radius={60}
+          strokeWidth={10}
+          tooltip="SIGTIME: 2023-11-17T09:07:56.940Z, QUALITY: 192"
+          color="emerald"
+        >
+          <Grid numItems={1}>
+            <Text className="text-center">TWB18</Text>
+            <Badge className="text-center">4%</Badge>
+          </Grid>
+        </ProgressCircle>
+      </>
+    );
+  };
+
   useEffect(() => {
     // START
     LoadData();
@@ -477,7 +736,7 @@ const MRRatio = () => {
             </Card>
             <strong>LINE B</strong>
             <Card className="flex flex-wrap gap-3 mx-auto">
-              <LineA />
+              <LineB />
               {/* {DisplayData(resultD14A)} */}
               {/* {ProgresData(resultD14A)}  */}
             </Card>
