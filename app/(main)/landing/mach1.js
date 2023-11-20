@@ -1,7 +1,7 @@
 import ReactSpeedometer from "react-d3-speedometer";
 import GaugeChart from "react-gauge-chart";
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+//import { CircularProgressbar } from "react-circular-progressbar";
+//import "react-circular-progressbar/dist/styles.css";
 
 import {
   Card,

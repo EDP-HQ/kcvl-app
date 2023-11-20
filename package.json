@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev -p 8081",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8081",
     "format": "prettier --write \"{components,app,layout,service,api-generator}/**/*.{js,ts,tsx,d.ts}\"",
     "build:analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
     "lint": "next lint"
