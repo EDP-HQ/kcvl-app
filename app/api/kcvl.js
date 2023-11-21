@@ -54,7 +54,7 @@ const url2 = "http://194.1.31.8:3200/";
 const fetchData = async (endpoint, vcode) => {
   try {
     const res = await axios.get(url2 + endpoint, {
-      timeout: 10000,
+      timeout: 5000,
       params: {
         udate: Date.now(),
         code: vcode,

@@ -27,10 +27,11 @@ import { BellIcon, RefreshIcon } from "@heroicons/react/solid";
 
 import { getd14, getd15, getd16 } from "../../api/kcvl";
 
-const MRRatio = () => {
+const MRRatio = ({ serverFetchNow }) => {
   const [selectedMachCode, setSelectedMachCode] = useState("D14A"); // Initial value, you can change it as needed
   const [data, setData] = useState(null);
-  const [fetchNow, setFetchNow] = useState(new Date());
+  const [fetchNow, setFetchNow] = useState();
+  const [loading, setLoading] = useState(true);
 
   const selectData = [
     "D14A",
@@ -49,6 +50,8 @@ const MRRatio = () => {
 
   const fetchAndSetData = async (code) => {
     try {
+      setLoading(true); // Set loading to true when starting to fetch data
+
       let fetchDataFunction;
       setFetchNow(new Date());
 
@@ -73,6 +76,8 @@ const MRRatio = () => {
     } catch (error) {
       console.error(`Error fetching data for ${code}:`, error);
       setData(null);
+    } finally {
+      setLoading(false); // Set loading to false when data fetching is complete
     }
   };
 
@@ -90,21 +95,29 @@ const MRRatio = () => {
     second: "numeric",
   };
 
-  const formattedDate = fetchNow.toLocaleString("en-US", {
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-  });
+  const formattedDate = fetchNow
+    ? fetchNow.toLocaleString("en-US", {
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+      })
+    : "";
 
   // Display data function
   const DisplayData = ({ data }) => {
+     if (loading) {
+       // Show loading indicator while data is being fetched
+       return <p>Loading...</p>;
+     }
+
     if (!data) {
       return <p>No Fetching data for {selectedMachCode}</p>;
     }
+    
     return (
       <>
         {data.map((item) => (
