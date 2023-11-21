@@ -1,33 +1,10 @@
 "use client";
 import { useState, useEffect, Suspense } from "react";
-import {
-  Title,
-  Subtitle,
-  Card,
-  Flex,
-  Metric,
-  ProgressBar,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Text,
-  Badge,
-  BadgeDelta,
-  Grid,
-  Bold,
-  Icon,
-  Button,
-} from "@tremor/react";
-
+import { Title, Subtitle, Card, Text, Badge, Grid } from "@tremor/react";
 import { ProgressCircle } from "@tremor/react";
-
-import { BellIcon, RefreshIcon } from "@heroicons/react/solid";
-
 import { getd14, getd15, getd16 } from "../../api/kcvl";
 
-const MRRatio = ({serverFetchNow}) => {
+const MRRatio = ({ serverFetchNow }) => {
   const [selectedMachCode, setSelectedMachCode] = useState("D14A"); // Initial value, you can change it as needed
   const [data, setData] = useState(null);
   const [fetchNow, setFetchNow] = useState();
@@ -94,21 +71,23 @@ const MRRatio = ({serverFetchNow}) => {
     second: "numeric",
   };
 
-  const formattedDate = fetchNow ? fetchNow.toLocaleString("en-US", {
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-  }): "";
+  const formattedDate = fetchNow
+    ? fetchNow.toLocaleString("en-US", {
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+      })
+    : "";
 
   // Display data function
   const DisplayData = ({ data }) => {
-     if (loading) {
-       return <p>Loading data...</p>; // Show loading indicator while data is being fetched
-     }
+    if (loading) {
+      return <p>Loading data...</p>; // Show loading indicator while data is being fetched
+    }
 
     if (!data) {
       return <p>No Fetching data for {selectedMachCode}</p>;
@@ -168,7 +147,7 @@ const MRRatio = ({serverFetchNow}) => {
               {machCode}
             </option>
           ))}
-        </select>
+        </select>       
       </Title>
       <Card className="flex flex-wrap gap-3 mx-auto">
         <DisplayData data={data} />
