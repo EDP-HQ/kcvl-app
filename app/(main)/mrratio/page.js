@@ -50,10 +50,9 @@ const MRRatio = ({serverFetchNow}) => {
 
   const fetchAndSetData = async (code) => {
     try {
-      setLoading(true); // Set loading to true when starting to fetch data
-
       let fetchDataFunction;
       setFetchNow(new Date());
+      setLoading(true); // Set loading to true when starting to fetch data
 
       //based on selected
       switch (code.substring(0, 3)) {
@@ -108,14 +107,13 @@ const MRRatio = ({serverFetchNow}) => {
   // Display data function
   const DisplayData = ({ data }) => {
      if (loading) {
-       // Show loading indicator while data is being fetched
-       return <p>Loading...</p>;
+       return <p>Loading data...</p>; // Show loading indicator while data is being fetched
      }
 
     if (!data) {
       return <p>No Fetching data for {selectedMachCode}</p>;
     }
-    
+
     return (
       <>
         {data.map((item) => (
