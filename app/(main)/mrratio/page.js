@@ -27,7 +27,6 @@ import { BellIcon, RefreshIcon } from "@heroicons/react/solid";
 
 import { getd14, getd15, getd16 } from "../../api/kcvl";
 
-const MRRatio = ({ serverFetchNow }) => {
 const MRRatio = ({serverFetchNow}) => {
   const [selectedMachCode, setSelectedMachCode] = useState("D14A"); // Initial value, you can change it as needed
   const [data, setData] = useState(null);
