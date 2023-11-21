@@ -27,10 +27,10 @@ import { BellIcon, RefreshIcon } from "@heroicons/react/solid";
 
 import { getd14, getd15, getd16 } from "../../api/kcvl";
 
-const MRRatio = () => {
+const MRRatio = ({serverFetchNow}) => {
   const [selectedMachCode, setSelectedMachCode] = useState("D14A"); // Initial value, you can change it as needed
   const [data, setData] = useState(null);
-  const [fetchNow, setFetchNow] = useState(new Date());
+  const [fetchNow, setFetchNow] = useState(null);
 
   const selectData = [
     "D14A",
@@ -90,7 +90,7 @@ const MRRatio = () => {
     second: "numeric",
   };
 
-  const formattedDate = fetchNow.toLocaleString("en-US", {
+  const formattedDate = fetchNow ? fetchNow.toLocaleString("en-US", {
     weekday: "short",
     month: "short",
     day: "numeric",
@@ -98,7 +98,7 @@ const MRRatio = () => {
     hour: "numeric",
     minute: "numeric",
     second: "numeric",
-  });
+  }): "";
 
   // Display data function
   const DisplayData = ({ data }) => {
