@@ -6,7 +6,7 @@ interface AppLayoutProps {
 }
 
 export const metadata: Metadata = {
-  title: "KCVL-APP",
+  title: "MACHINE MONITORING-APP",
   description: "Description",
   robots: { index: false, follow: false },
   viewport: { initialScale: 1, maximumScale: 1, width: "device-width" },

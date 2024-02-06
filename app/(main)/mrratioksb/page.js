@@ -25,28 +25,29 @@ import { ProgressCircle } from "@tremor/react";
 
 import { BellIcon, RefreshIcon } from "@heroicons/react/solid";
 
-import { getd14, getd15, getd16 } from "../../api/kcvl";
+import {  getksb} from "../../api/ksb";
 
 const MRRatio = ({serverFetchNow}) => {
-  const [selectedMachCode, setSelectedMachCode] = useState("KCVL-TW-A"); // Initial value, you can change it as needed
+  const [selectedMachCode, setSelectedMachCode] = useState("SWF"); // Initial value, you can change it as needed
   const [data, setData] = useState(null);
   const [fetchNow, setFetchNow] = useState();
   const [loading, setLoading] = useState(true);
 
   const selectData = [
     
-    "KCVL-TW-A",
-    "KCVL-TW-B",
-    "KCVL-TW-C",
-    "KCVL-TW-D",
-    "KCVL-TW-E",
-    "KCVL-TW-F",
-    "KCVL-TW-G",
-    "KCVL-TW-H",
-    "KCVL-FD-A",
-    "KCVL-FD-B",
-    "KCVL-FD-C",
-    "KCVL-FD-",
+    "SWF",
+    "INLINE",
+    "WR 1",
+    "WR 2",
+    "WR 3",
+    "PC",
+    "SPRINGWIRE",
+    "BW-A",
+    "BW-A1",
+    "SC-B",
+    "SC-E",
+    "BW-G",
+    "KNSB",
   ];
 
   const fetchAndSetData = async (code) => {
@@ -58,28 +59,55 @@ const MRRatio = ({serverFetchNow}) => {
       //based on selected
       switch (code) {
      
-        case "KCVL-TW-A":
-          code = 'D14A'
-          fetchDataFunction = getd14;
+      
+        case "SWF":
+          code = "D01"; // Y
+          fetchDataFunction = getksb;
           break;
-        case "KCVL-TW-B":
-          code = 'D14B'
-          fetchDataFunction = getd14;
+        case "INLINE":
+          code = "D02"; //y
+          fetchDataFunction = getksb;
           break;
-        case "KCVL-TW-C":
-          code = 'D14C'
-          fetchDataFunction = getd14;
+        case "WR 1":
+          code = "D03"; //y
+          fetchDataFunction = getksb;
           break;
-           case "KCVL-TW-B":
-            code = 'D14B'
-            fetchDataFunction = getd14;
-            break;
-        case "D15":
-          fetchDataFunction = getd15;
+        case "WR 2":
+          code = "D04"; //y
+          fetchDataFunction = getksb;
           break;
-        case "D16":
-          fetchDataFunction = getd16;
-          break
+        case "WR 3":
+          code = "D05"; //y
+          fetchDataFunction = getksb;
+          break;
+        case "PC":
+          code = "D06"; //n
+          fetchDataFunction = getksb;
+          break;
+        case "SPRINGWIRE":
+          code = "D07"; //y
+          fetchDataFunction = getksb;
+          break;
+        case "BW-A":
+          code = "D08"; //n
+          fetchDataFunction = getksb;
+          break;
+        case "BW-A1":
+          code = "D09"; //n
+          fetchDataFunction = getksb;
+          break;
+        case "SC-B":
+          code = "D10"; //n
+          fetchDataFunction = getksb;
+          break;
+        case "SC-E":
+          code = "D11"; //n
+          fetchDataFunction = getksb;
+          break;
+        case "BW-G":
+          code = "D12"; //n
+          fetchDataFunction = getksb;
+          break;
         default:
           console.error(`Invalid MACHCODE: ${code}`);
           return;
@@ -144,7 +172,7 @@ const MRRatio = ({serverFetchNow}) => {
 }; */
 
 
-return (
+    return (
   <>
     {data.map((item) => {
       

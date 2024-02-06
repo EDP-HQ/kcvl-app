@@ -36,7 +36,7 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
         <i className="pi pi-bars" />
       </button>
       <Link href="/" className="layout-topbar-logo">
-        <span>KCVL-APP</span>
+        <span>MACHINE MONITORING</span>
       </Link>
 
       <button
@@ -58,10 +58,10 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
           <i className="pi pi-calendar"></i>
           <span>Calendar</span>
         </button> */}
-        <button type="button" className="p-link layout-topbar-button" aria-label="User" title="User">
+   {/*      <button type="button" className="p-link layout-topbar-button" aria-label="User" title="User">
           <i className="pi pi-user"></i>
           <span>Profile</span>
-        </button>
+        </button> */}
         {/* <Link href="/documentation">
           <button type="button" className="p-link layout-topbar-button">
             <i className="pi pi-cog"></i>
