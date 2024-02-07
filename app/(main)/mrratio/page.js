@@ -1,30 +1,7 @@
 "use client";
 import { useState, useEffect, Suspense } from "react";
-import {
-  Title,
-  Subtitle,
-  Card,
-  Flex,
-  Metric,
-  ProgressBar,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Text,
-  Badge,
-  BadgeDelta,
-  Grid,
-  Bold,
-  Icon,
-  Button,
-} from "@tremor/react";
-
+import { Title, Subtitle, Card, Text, Badge, Grid } from "@tremor/react";
 import { ProgressCircle } from "@tremor/react";
-
-import { BellIcon, RefreshIcon } from "@heroicons/react/solid";
-
 import { getd14, getd15, getd16 } from "../../api/kcvl";
 
 const MRRatio = ({serverFetchNow}) => {
@@ -123,9 +100,9 @@ const MRRatio = ({serverFetchNow}) => {
 
   // Display data function
   const DisplayData = ({ data }) => {
-     if (loading) {
-       return <p>Loading data...</p>; // Show loading indicator while data is being fetched
-     }
+    if (loading) {
+      return <p>Loading data...</p>; // Show loading indicator while data is being fetched
+    }
 
     if (!data) {
       return <p>No Fetching data for {selectedMachCode}</p>;
@@ -282,7 +259,7 @@ return (
               {machCode}
             </option>
           ))}
-        </select>
+        </select>       
       </Title>
       <Card className="flex flex-wrap gap-3 mx-auto">
         <DisplayData data={data} />
