@@ -1,16 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 
-import Link from "next/link";
-import { classNames } from "primereact/utils";
-import React, {
-  forwardRef,
-  useContext,
-  useImperativeHandle,
-  useRef,
-} from "react";
-import { AppTopbarRef } from "../types/types";
-import { LayoutContext } from "./context/layoutcontext";
-import { prototype } from "events";
+import Link from 'next/link';
+import { classNames } from 'primereact/utils';
+import React, { forwardRef, useContext, useImperativeHandle, useRef } from 'react';
+import { AppTopbarRef } from '@/types';
+import { LayoutContext } from './context/layoutcontext';
 
 const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
   const { layoutConfig, layoutState, onMenuToggle, showProfileSidebar } =

@@ -264,7 +264,7 @@ const MRAvgRatioKSB = () => {
 
                         return (
                             <div title={title} className="text-center" style={{ fontSize: '2.0rem', fontWeight, color: 'var(--text-color)' }}>
-                                {value}
+                                {value} %
                             </div>
                         );
                     };
@@ -401,7 +401,7 @@ const MRAvgRatioKSB = () => {
 
             return (
                 <div className="text-center">
-                    <Button severity="danger" label="Yesterday"  outlined badge={_worseD} badgeClassName="p-badge-danger" />
+                    <Button severity="danger" label="Yesterday"  outlined badge={_worseD +'%'} badgeClassName="p-badge-danger" />
                     <Button severity="danger" label="Week" text outlined badge={_worseW} badgeClassName="p-badge-danger" />
                     <Button severity="danger" label="Month" text outlined badge={_worseM} badgeClassName="p-badge-danger" />
                 </div>
