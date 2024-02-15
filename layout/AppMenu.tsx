@@ -28,17 +28,17 @@ const AppMenu = () => {
         {
           label: "KCVL Machine Running Status",
           icon: "pi pi-fw pi-check-square",
-          to: "/mrratio",
+          to: "/kcvl/mrratio",
         },
         {
           label: "KSB Machine Running Status",
           icon: "pi pi-fw pi-check-square",
-          to: "/mrratioksb",
+          to: "/kcvl/mrratioksb",
         },
         {
           label: "Machine Average Ratio",
           icon: "pi pi-fw pi-check-square",
-          to: "/mravgratio",
+          to: "/kcvl/mravgratio",
         },
         // { label: "Dashboard", icon: "pi pi-fw pi-id-card", to: "/landing" },
         // { label: "Dashboard - #Demo1", icon: "pi pi-fw pi-id-card", to: "/kcvldemo1" },

@@ -209,7 +209,7 @@ const MRAvgRatioKSB = () => {
                     const headertableDT = (item) => {
                         const _machname = item[0].machname;
                         return (
-                            <div className="text-center justify-content-center" style={{ fontSize: '2.1rem' }}>
+                            <div className="text-center justify-content-center" style={{ fontSize: '2.0rem' }}>
                                 {_machname}
                             </div>
                         );
@@ -228,7 +228,7 @@ const MRAvgRatioKSB = () => {
                             _footer = 'START TIME : ';
                         }
                         return (
-                            <div className="text-center" style={{ fontWeight: '600', color: 'var(--text-color)' }}>
+                            <div className="text-center" style={{ fontWeight: '500', color: 'var(--text-color)' }}>
                                 <small>{_footer}</small> {_duration}
                             </div>
                         );
@@ -240,13 +240,13 @@ const MRAvgRatioKSB = () => {
                         if (_mcstatus === '1') {
                             return (
                                 <div className="text-center">
-                                    <i title={'RUN'} className="pi pi-spin pi-cog" style={{ fontSize: '2.0rem', color: 'var(--primary-color-text)' }}></i>
+                                    <i title={'RUN'} className="pi pi-spin pi-cog" style={{ fontSize: '1.5rem', color: 'var(--primary-color-text)' }}></i>
                                 </div>
                             );
                         } else {
                             return (
                                 <div className="text-center">
-                                    <i title={'STOP'} className="pi pi-stop-circle" style={{ fontSize: '2.0rem', color: 'var(--primary-color-text)' }}></i>
+                                    <i title={'STOP'} className="pi pi-stop-circle" style={{ fontSize: '1.5rem', color: 'var(--primary-color-text)' }}></i>
                                 </div>
                             );
                         }
@@ -255,16 +255,16 @@ const MRAvgRatioKSB = () => {
                     const CustomColumn = ({ value, title }) => {
                         let fontWeight;
                         if (value <= 40) {
-                            fontWeight = '600';
+                            fontWeight = '500';
                         } else if (value > 40 && value <= 60) {
-                            fontWeight = '550';
+                            fontWeight = '500';
                         } else {
                             fontWeight = '500';
                         }
 
                         return (
-                            <div title={title} className="text-center" style={{ fontSize: '2.0rem', fontWeight, color: 'var(--text-color)' }}>
-                                {value} %
+                            <div title={title} className="text-center" style={{ fontSize: '1.5rem', fontWeight, color: 'var(--text-color)' }}>
+                                {value}%
                             </div>
                         );
                     };
@@ -283,10 +283,10 @@ const MRAvgRatioKSB = () => {
                     return (
                         <div key={item.uniqueIdentifier} className="col-6 md:col-4 xl:col-3 justify-content-center" style={{ padding: '0.5rem', margin: '0' }}>
                             <DataTable value={ratioData} footer={footertableDT(ratioData)} header={headertableDT(ratioData)} stripedRows showGridlines color="" tableStyle={{ width: '100%' }}>
-                                <Column body={col_MCSTATUS} field="mcstatus" header="RUN/STOP" bodyStyle={{ width: '25%', backgroundColor: _BGKnob }}></Column>
-                                <Column body={col_DAY} field="day" header="YESTERDAY" bodyStyle={{ width: '25%', backgroundColor: _BGDay }}></Column>
-                                <Column body={col_WEEK} field="week" header="WEEK" bodyStyle={{ width: '25%', backgroundColor: _BGWeek }}></Column>
-                                <Column body={col_MONTH} field="month" header="MONTH" bodyStyle={{ width: '25%', height: '80px', backgroundColor: _BGMonth }}></Column>
+                                <Column body={col_MCSTATUS} field="mcstatus" header="RUN/STOP" style={{ width: '25%'}}  bodyStyle={{ backgroundColor: _BGKnob }}></Column>
+                                <Column body={col_DAY} field="day" header="YESTERDAY" style={{ width: '25%'}}  bodyStyle={{ backgroundColor: _BGDay }}></Column>
+                                <Column body={col_WEEK} field="week" header="WEEK" style={{ width: '25%'}}  bodyStyle={{ backgroundColor: _BGWeek }}></Column>
+                                <Column body={col_MONTH} field="month" header="MONTH" style={{ width: '25%'}} bodyStyle={{height: '80px', backgroundColor: _BGMonth }}></Column>
                             </DataTable>
                             <br />
                             {ratioData.mcstatus}
@@ -548,10 +548,10 @@ const MRAvgRatioKSB = () => {
                             <div className="col-12 md:col-12 xl:col-12">
                                 <Button title="Update" loading={loading} label={formattedDate} className="" text outlined size="small" severity="info" icon="pi pi-refresh" onClick={() => fetchAndSetData(selectedDropDown)} />
                             </div>
-                            <div className="col-12 md:col-6 xl:col-4">
+                            <div className="col-12 md:col-4 xl:col-3">
                                 <DisplayRunStop data={data} />
                             </div>
-                            <div className="col-12 md:col-6 xl:col-8">
+                            <div className="col-12 md:col-8 xl:col-9">
                                 <DisplayLegend data={data} />
                             </div>
                             <div className="col-12 md:col-12 xl:col-12">
