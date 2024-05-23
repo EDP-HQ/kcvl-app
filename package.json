@@ -1,11 +1,11 @@
 {
     "name": "kcvl-app",
-    "version": "1.24.3-SNAPSHOT",
+    "version": "1.24.3-v2",
     "private": true,
     "scripts": {
-        "dev": "next dev -p 8081",
+        "dev": "next dev -p 8084",
         "build": "next build",
-        "start": "next start -p 8081",
+        "start": "next start -p 8084",
         "format": "prettier --write \"{components,app,service,api-generator}/**/*.{js,ts,tsx,d.ts}\"",
         "lint": "next lint"
     },

@@ -7,7 +7,7 @@ interface SimpleLayoutProps {
 }
 
 export const metadata: Metadata = {
-    title: 'ENS APP [FULL]',
+    title: 'Machine Monitoring App [v2]',
     description: 'The ultimate collection of design-agnostic, flexible and accessible React UI Components.'
 };
 
